@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"medallion_float": {
+			"loop": true,
+			"animation_length": 3.58333,
+			"bones": {
+				"medallion": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 100) * 1", 0]
+					}
+				}
+			}
+		},
+		"medallion_spin": {
+			"loop": true,
+			"animation_length": 5.29167,
+			"bones": {
+				"medallion": {
+					"rotation": {
+						"vector": [0, "math.sin(query.anim_time * 100) * 360", 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 100) * 1", 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
