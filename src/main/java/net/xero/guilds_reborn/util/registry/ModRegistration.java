@@ -1,5 +1,8 @@
 package net.xero.guilds_reborn.util.registry;
 
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,4 +30,7 @@ public class ModRegistration {
             () -> new Item(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<Item> NAR_MEDALLION = ITEMS.register("nar_medallion",
             () -> new Item(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
+
+    public static final TagKey<Item> GUILD_MEDALLION = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(GuildsRebornMod.MOD_ID, "guild_medallion"));
+
 }
