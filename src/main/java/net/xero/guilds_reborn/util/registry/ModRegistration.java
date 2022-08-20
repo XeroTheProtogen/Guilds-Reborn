@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xero.guilds_reborn.GuildsRebornMod;
 import net.xero.guilds_reborn.item.NaginataOfPurityItem;
+import net.xero.guilds_reborn.util.material.GRTools;
 
 public class ModRegistration {
 
@@ -32,7 +33,7 @@ public class ModRegistration {
     public static final RegistryObject<Item> NAR_MEDALLION = ITEMS.register("nar_medallion",
             () -> new Item(new Item.Properties().tab(ModSetup.GUILD_MEDALLIONS)));
     public static final RegistryObject<Item> NAGINATA_OF_PURITY = ITEMS.register("naginata_of_purity",
-            () -> new NaginataOfPurityItem(new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
+            () -> new NaginataOfPurityItem(GRTools.TPO_WEAPONS, 2, 0,new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1).durability(2348)));
     public static final TagKey<Item> GUILD_MEDALLION = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(GuildsRebornMod.MOD_ID, "guild_medallion"));
 
 

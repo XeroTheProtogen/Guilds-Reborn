@@ -1,7 +1,8 @@
 package net.xero.guilds_reborn.item;
 
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
 import net.minecraftforge.client.IItemRenderProperties;
 import net.xero.guilds_reborn.item.client.NaginataOfPurityRenderer;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -14,11 +15,11 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.function.Consumer;
 
-public class NaginataOfPurityItem extends Item implements IAnimatable {
+public class NaginataOfPurityItem extends SwordItem implements IAnimatable {
     public AnimationFactory factory = new AnimationFactory(this);
 
-    public NaginataOfPurityItem(Properties pProperties) {
-        super(pProperties);
+    public NaginataOfPurityItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
     @Override
