@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xero.guilds_reborn.GuildsRebornMod;
+import net.xero.guilds_reborn.item.NaginataOfPurityItem;
 
 public class ModRegistration {
 
@@ -25,12 +26,14 @@ public class ModRegistration {
     }
 
     public static final RegistryObject<Item> TPO_MEDALLION = ITEMS.register("tpo_medallion",
-            () -> new Item(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
+            () -> new Item(new Item.Properties().tab(ModSetup.GUILD_MEDALLIONS)));
     public static final RegistryObject<Item> AEG_MEDALLION = ITEMS.register("aeg_medallion",
-            () -> new Item(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
+            () -> new Item(new Item.Properties().tab(ModSetup.GUILD_MEDALLIONS)));
     public static final RegistryObject<Item> NAR_MEDALLION = ITEMS.register("nar_medallion",
-            () -> new Item(new Item.Properties().tab(ModSetup.ITEM_GROUP)));
-
+            () -> new Item(new Item.Properties().tab(ModSetup.GUILD_MEDALLIONS)));
+    public static final RegistryObject<Item> NAGINATA_OF_PURITY = ITEMS.register("naginata_of_purity",
+            () -> new NaginataOfPurityItem(new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
     public static final TagKey<Item> GUILD_MEDALLION = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(GuildsRebornMod.MOD_ID, "guild_medallion"));
+
 
 }

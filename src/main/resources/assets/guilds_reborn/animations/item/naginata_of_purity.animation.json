@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"tpo_naginata_idle": {
+			"loop": true,
+			"bones": {
+				"tsu1": {
+					"position": {
+						"vector": ["math.cos(query.anim_time * 100) * 1", 0, 0]
+					}
+				},
+				"tsu2": {
+					"position": {
+						"vector": [0, 0, "math.cos(query.anim_time * 100) * 1"]
+					}
+				},
+				"tsu3": {
+					"position": {
+						"vector": ["math.cos(query.anim_time * 100) * -1", 0, 0]
+					}
+				},
+				"tsu4": {
+					"position": {
+						"vector": [0, 0, "math.cos(query.anim_time * 100) * -1"]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

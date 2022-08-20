@@ -1,6 +1,8 @@
 {
   "item.guilds_reborn.aeg_medallion": "AEG Medallion",
+  "item.guilds_reborn.naginata_of_purity": "Naginata Of Purity",
   "item.guilds_reborn.nar_medallion": "NAR Medallion",
   "item.guilds_reborn.tpo_medallion": "TPO Medallion",
-  "itemGroup.guilds_reborn": "Guilds Reborn"
+  "itemGroup.guild_medallions": "Guild Medallions",
+  "itemGroup.guild_weapons": "Guild Weapons"
 }
