@@ -13,6 +13,7 @@ import net.xero.guilds_reborn.util.registry.ModRegistration;
 import net.xero.guilds_reborn.util.registry.ModSetup;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
+import software.bernie.geckolib3.network.GeckoLibNetwork;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -31,6 +32,7 @@ public class GuildsRebornMod
         ModRegistration.init();
         //Activate Geckolib
         GeckoLib.initialize();
+        GeckoLibNetwork.initialize();
 
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
