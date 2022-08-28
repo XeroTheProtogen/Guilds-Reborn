@@ -10,7 +10,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.IItemRenderProperties;
 import net.minecraftforge.network.PacketDistributor;
-import net.xero.guilds_reborn.item.client.NaginataOfPurityRenderer;
+import net.xero.guilds_reborn.item.client.HazelsScytheRenderer;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -25,15 +25,14 @@ import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.function.Consumer;
 
-public class NaginataOfPurityItem extends SwordItem implements IAnimatable, ISyncable {
+public class HazelsScytheItem extends SwordItem implements IAnimatable, ISyncable {
     private static final String CONTROLLER_NAME = "controller";
     private static final int ANIM_IDLE = 0;
     private static final int ANIM_HELD = 0;
 
-    public AnimationFactory factory = new AnimationFactory(this);
+    private AnimationFactory factory = new AnimationFactory(this);
 
-
-    public NaginataOfPurityItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+    public HazelsScytheItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
         GeckoLibNetwork.registerSyncable(this);
     }
@@ -42,7 +41,7 @@ public class NaginataOfPurityItem extends SwordItem implements IAnimatable, ISyn
     public void initializeClient(Consumer<IItemRenderProperties> consumer) {
         super.initializeClient(consumer);
         consumer.accept(new IItemRenderProperties() {
-            private final BlockEntityWithoutLevelRenderer renderer = new NaginataOfPurityRenderer();
+            private final BlockEntityWithoutLevelRenderer renderer = new HazelsScytheRenderer();
 
             @Override
             public BlockEntityWithoutLevelRenderer getItemStackRenderer() {
@@ -59,13 +58,13 @@ public class NaginataOfPurityItem extends SwordItem implements IAnimatable, ISyn
         data.addAnimationController(controller);
     }
 
-    private <E extends SwordItem & IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        return PlayState.CONTINUE;
-    }
-
     @Override
     public AnimationFactory getFactory() {
         return this.factory;
+    }
+
+    private <E extends SwordItem & IAnimatable> PlayState predicate(AnimationEvent<E> event) {
+        return PlayState.CONTINUE;
     }
 
     @Override
@@ -75,10 +74,9 @@ public class NaginataOfPurityItem extends SwordItem implements IAnimatable, ISyn
             final int id = GeckoLibUtil.guaranteeIDForStack(pStack, (ServerLevel) pLevel);
             final PacketDistributor.PacketTarget target = PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> player);
             if (!player.swinging) {
-                    GeckoLibNetwork.syncAnimation(target, this, id, ANIM_IDLE);
+                GeckoLibNetwork.syncAnimation(target, this, id, ANIM_IDLE);
             }
         }
-
         super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);
     }
 
@@ -87,7 +85,7 @@ public class NaginataOfPurityItem extends SwordItem implements IAnimatable, ISyn
         final AnimationController<?> controller = GeckoLibUtil.getControllerForID(this.factory, id, CONTROLLER_NAME);
         if (state == ANIM_HELD) {
             if (controller.getAnimationState() == AnimationState.Stopped) {
-                controller.setAnimation(new AnimationBuilder().addAnimation("tpo_naginata_held", true));
+                controller.setAnimation(new AnimationBuilder().addAnimation("hazels_scythe_idle", true));
             }
         }
     }

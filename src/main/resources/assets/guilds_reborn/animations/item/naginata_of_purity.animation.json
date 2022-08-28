@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"tpo_naginata_idle": {
+		"tpo_naginata_held": {
 			"loop": true,
 			"bones": {
 				"tsu1": {

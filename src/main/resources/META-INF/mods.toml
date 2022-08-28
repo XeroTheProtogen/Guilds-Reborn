@@ -56,3 +56,15 @@ This mod intends to re-introduce the guilds from the faithful backrooms server i
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.guilds_reborn]]
+    modId="geckolib3"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.guilds_reborn]]
+    modId="faithful_backrooms"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"

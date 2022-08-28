@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"hazels_scythe_idle": {
+			"loop": true,
+			"bones": {
+				"blade1": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 150) * 1", 0]
+					}
+				},
+				"blade2": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 125) * 1", 0]
+					}
+				},
+				"blade3": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 100) * 1", 0]
+					}
+				},
+				"blade4": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 125) * 1", 0]
+					}
+				},
+				"blade5": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 150) * 1", 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,77 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hazels_scythe",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Scythe",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "Handle",
+					"parent": "Scythe",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, -1], "size": [2, 26, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Blade",
+					"parent": "Scythe",
+					"pivot": [0, 21, 1]
+				},
+				{
+					"name": "blade1",
+					"parent": "Blade",
+					"pivot": [0, 21, 1],
+					"cubes": [
+						{"origin": [-0.5, 17, 1], "size": [1, 8, 3], "uv": [16, 11]}
+					]
+				},
+				{
+					"name": "blade2",
+					"parent": "Blade",
+					"pivot": [0, 22, 5],
+					"cubes": [
+						{"origin": [-0.46085, 17.99923, 4], "size": [1, 8, 3], "uv": [16, 0]}
+					]
+				},
+				{
+					"name": "blade3",
+					"parent": "Blade",
+					"pivot": [0, 22, 9],
+					"cubes": [
+						{"origin": [-0.5, 19, 7], "size": [1, 8, 3], "uv": [8, 11]}
+					]
+				},
+				{
+					"name": "blade4",
+					"parent": "Blade",
+					"pivot": [0, 22, 11],
+					"cubes": [
+						{"origin": [-0.5, 18, 10], "size": [1, 8, 3], "uv": [8, 0]},
+						{"origin": [-0.5, 17, 13], "size": [1, 7, 2], "uv": [8, 22]}
+					]
+				},
+				{
+					"name": "blade5",
+					"parent": "Blade",
+					"pivot": [0, 19, 17],
+					"cubes": [
+						{"origin": [-0.5, 16, 15], "size": [1, 6, 2], "uv": [20, 22]},
+						{"origin": [-0.5, 15, 17], "size": [1, 6, 2], "uv": [14, 22]}
+					]
+				}
+			]
+		}
+	]
+}

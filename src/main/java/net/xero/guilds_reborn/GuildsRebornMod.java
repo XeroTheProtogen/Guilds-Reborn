@@ -30,7 +30,8 @@ public class GuildsRebornMod
 
         //Register the Register
         ModRegistration.init();
-        //Activate Geckolib
+
+        //Activate Geckolib & Geckolib Network
         GeckoLib.initialize();
         GeckoLibNetwork.initialize();
 

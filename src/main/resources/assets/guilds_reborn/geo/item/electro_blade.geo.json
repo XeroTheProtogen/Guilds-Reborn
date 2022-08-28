@@ -1,0 +1,106 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.Electro-Blade",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Electro_Blade",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "Blade",
+					"parent": "Electro_Blade",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "Segments",
+					"parent": "Blade",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "seg",
+					"parent": "Segments",
+					"pivot": [0, 10, 0],
+					"cubes": [
+						{"origin": [-1, 8.5, -3], "size": [2, 2, 6], "uv": [0, 23]}
+					]
+				},
+				{
+					"name": "seg2",
+					"parent": "Segments",
+					"pivot": [0, 13, 0],
+					"cubes": [
+						{"origin": [-1, 11.5, -3], "size": [2, 2, 6], "uv": [22, 9]}
+					]
+				},
+				{
+					"name": "seg3",
+					"parent": "Segments",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{"origin": [-1, 14.5, -3], "size": [2, 2, 6], "uv": [16, 17]}
+					]
+				},
+				{
+					"name": "seg4",
+					"parent": "Segments",
+					"pivot": [0, 19, 0],
+					"cubes": [
+						{"origin": [-1, 17.5, -3], "size": [2, 2, 6], "uv": [6, 15]}
+					]
+				},
+				{
+					"name": "seg5",
+					"parent": "Segments",
+					"pivot": [0, 22, 0],
+					"cubes": [
+						{"origin": [-1, 20.5, -3], "size": [2, 2, 6], "uv": [12, 7]}
+					]
+				},
+				{
+					"name": "seg6",
+					"parent": "Segments",
+					"pivot": [0, 25, 0],
+					"cubes": [
+						{"origin": [-1, 23.5, -2], "size": [2, 2, 4], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "seg7",
+					"parent": "Segments",
+					"pivot": [0, 28, 0],
+					"cubes": [
+						{"origin": [-1, 26.5, -1], "size": [2, 2, 2], "uv": [8, 0]}
+					]
+				},
+				{
+					"name": "Hilt",
+					"parent": "Electro_Blade",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 0, -1], "size": [2, 7, 2], "uv": [16, 25]},
+						{"origin": [-1, 2, -1], "size": [2, 0, 2], "uv": [36, 1]},
+						{"origin": [0, 2, -1], "size": [0, 5, 2], "uv": [0, 31]},
+						{"origin": [0, 2, -1], "size": [0, 5, 2], "pivot": [0, 0, 0], "rotation": [0, -90, 0], "uv": [0, 31]}
+					]
+				},
+				{
+					"name": "Guard",
+					"parent": "Electro_Blade",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 7, -3], "size": [6, 1, 6], "uv": [12, 0]}
+					]
+				}
+			]
+		}
+	]
+}
