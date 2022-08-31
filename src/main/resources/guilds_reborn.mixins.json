@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "package": "net.xero.guilds_reborn.mixin",
+  "refmap": "guilds_reborn.refmap.json",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [],
+  "minVersion": "0.8.4"
+}
