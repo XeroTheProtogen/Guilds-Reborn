@@ -1,10 +1,14 @@
 {
   "item.guilds_reborn.aeg_medallion": "AEG Medallion",
   "item.guilds_reborn.electro_blade": "Electro-Blade",
+  "item.guilds_reborn.energized_boot": "Energized Boots",
+  "item.guilds_reborn.energized_chestplate": "Energized Chestplate",
+  "item.guilds_reborn.energized_helmet": "Energized Helmet",
+  "item.guilds_reborn.energized_leggings": "Energized Leggings",
   "item.guilds_reborn.hazels_scythe": "Hazel's Scythe",
   "item.guilds_reborn.naginata_of_purity": "Naginata Of Purity",
   "item.guilds_reborn.nar_medallion": "NAR Medallion",
   "item.guilds_reborn.tpo_medallion": "TPO Medallion",
   "itemGroup.guild_medallions": "Guild Medallions",
-  "itemGroup.guild_weapons": "Guild Weapons"
+  "itemGroup.guild_weapons": "Guild Equipment"
 }

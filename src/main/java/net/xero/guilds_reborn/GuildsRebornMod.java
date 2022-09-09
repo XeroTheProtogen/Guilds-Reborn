@@ -5,9 +5,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.xero.guilds_reborn.config.GRCommonConfig;
 import net.xero.guilds_reborn.util.registry.ClientSetup;
 import net.xero.guilds_reborn.util.registry.ModRegistration;
 import net.xero.guilds_reborn.util.registry.ModSetup;
@@ -34,6 +37,8 @@ public class GuildsRebornMod
         //Activate Geckolib & Geckolib Network
         GeckoLib.initialize();
         GeckoLibNetwork.initialize();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GRCommonConfig.SPEC, "guilds_reborn-common.toml");
 
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();

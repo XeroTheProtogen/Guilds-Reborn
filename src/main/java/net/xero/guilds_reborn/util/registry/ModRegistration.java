@@ -3,6 +3,7 @@ package net.xero.guilds_reborn.util.registry;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.decoration.Motive;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -13,8 +14,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xero.guilds_reborn.GuildsRebornMod;
 import net.xero.guilds_reborn.item.ElectroBladeItem;
+import net.xero.guilds_reborn.item.EnergizedArmorItem;
 import net.xero.guilds_reborn.item.HazelsScytheItem;
 import net.xero.guilds_reborn.item.NaginataOfPurityItem;
+import net.xero.guilds_reborn.util.material.GRArmorMaterials;
 import net.xero.guilds_reborn.util.material.GRTools;
 
 public class ModRegistration {
@@ -38,6 +41,7 @@ public class ModRegistration {
     public static final RegistryObject<Item> NAR_MEDALLION = ITEMS.register("nar_medallion",
             () -> new Item(new Item.Properties().tab(ModSetup.GUILD_MEDALLIONS)));
 
+    // Guild Melee Weapons
     public static final RegistryObject<Item> NAGINATA_OF_PURITY = ITEMS.register("naginata_of_purity",
             () -> new NaginataOfPurityItem(GRTools.TPO_WEAPONS, 2, 0, new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1).durability(2348)));
     public static final RegistryObject<Item> ELECTRO_BLADE = ITEMS.register("electro_blade",
@@ -45,8 +49,24 @@ public class ModRegistration {
     public static final RegistryObject<Item> HAZELS_SCYTHE = ITEMS.register("hazels_scythe",
             () -> new HazelsScytheItem(GRTools.AEG_WEAPONS, 1, 1, new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1).durability(2348)));
 
+    // Nar Armor
+    public static final RegistryObject<Item> ENERGIZED_HELMET = ITEMS.register("energized_helmet",
+            () -> new EnergizedArmorItem(GRArmorMaterials.NAR_ARMOR, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
+    public static final RegistryObject<Item> ENERGIZED_CHESTPLATE = ITEMS.register("energized_chestplate",
+            () -> new EnergizedArmorItem(GRArmorMaterials.NAR_ARMOR, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
+    public static final RegistryObject<Item> ENERGIZED_LEGGINGS = ITEMS.register("energized_leggings",
+            () -> new EnergizedArmorItem(GRArmorMaterials.NAR_ARMOR, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
+    public static final RegistryObject<Item> ENERGIZED_BOOTS = ITEMS.register("energized_boot",
+            () -> new EnergizedArmorItem(GRArmorMaterials.NAR_ARMOR, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModSetup.GUILD_WEAPONS).stacksTo(1)));
+
+    // Tags
     public static final TagKey<Item> GUILD_MEDALLION = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(GuildsRebornMod.MOD_ID, "guild_medallion"));
 
+    // Paintings
     public static final RegistryObject<Motive> TRUE_PERFECTION = PAINTINGS.register("true_perfection", () -> new Motive(64, 64));
     public static final RegistryObject<Motive> TECHNOLOGICAL_STRIDE = PAINTINGS.register("technological_stride", () -> new Motive(64, 64));
     public static final RegistryObject<Motive> CIVIL_DEFENCE = PAINTINGS.register("civil_defence", () -> new Motive(64, 64));

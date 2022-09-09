@@ -168,9 +168,9 @@ dependencies {
 
     implementation fg.deobf("curse.maven:jei-238222:3885885")
 
-    implementation fg.deobf("curse.maven:faithfulbackrooms-548049:3947155")
+    implementation fg.deobf("curse.maven:faithfulbackrooms-548049:3964298")
 
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.36')
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.37')
 
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
